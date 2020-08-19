@@ -8,4 +8,7 @@ pipeline {
     }
 
   }
+  environment {
+    sourceDir = 'C:\\Apps\\jenkins\\workspace\\SCM_BlueOcean'
+  }
 }
