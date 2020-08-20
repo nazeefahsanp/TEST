@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('Checkout') {
+    stage('Declarative : Checkout') {
       steps {
-        bat(script: ' @echo off echo "Checkout" %sourceDir%/create_build.bat --branchName=%branchName% --targetTag=%targetTag% --originTag="%originTag%" --sourceDir=%sourceDir%', label: 'Checkout')
+        bat(script: ' @echo off echo "Checkout"  @%sourceDir%/create_build.bat --branchName=%branchName% --targetTag=%targetTag% --originTag="%originTag%" --sourceDir=%sourceDir%', label: 'Declarative : Checkout')
       }
     }
 
