@@ -3,10 +3,7 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        node(label: 'Checkout') {
-          bat(script: '%sourceDir%/create_build.bat --targetTag=%targetTag%', label: 'Checkout')
-        }
-
+        build 'Source Code Analysis'
       }
     }
 
