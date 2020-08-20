@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        bat(script: '%sourceDir%/create_build.bat', label: 'Declarative : Checkout')
+        bat(script: '%sourceDir%/create_build.bat --targetTag=%targetTag%', label: 'Declarative : Checkout')
       }
     }
 
