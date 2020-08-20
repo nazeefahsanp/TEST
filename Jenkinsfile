@@ -3,12 +3,13 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        bat(script: '%sourceDir%/create_build.bat --branchName=%branchName% --targetTag=%targetTag% --originTag="%originTag%" --sourceDir=%sourceDir%', label: 'Declarative : Checkout')
+        bat(script: '%sourceDir%/create_build.bat', label: 'Declarative : Checkout')
       }
     }
 
   }
   environment {
     sourceDir = 'C:\\Apps\\jenkins\\workspace\\SCM_BlueOcean'
+    targetTag = '202022220'
   }
 }
