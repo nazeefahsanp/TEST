@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        build 'Source Code Analysis'
+        build 'Code Checkout'
       }
     }
 
